@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CodeNIH | Research Fellow-Run Incubator at the NIH</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- Converted favicon png to base64 because it wasn't being read OPTIMIZE THIS -->
+    <link href="data:image/png;base64,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" rel="icon" type="image/png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body data-spy="scroll" data-target="#navbar" data-offset="0">
+   <!--  <header id="header" role="banner">
+        <div class="container">
+            <div id="navbar" class="navbar navbar-default">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"></a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#main-slider"><i class="icon-home"></i></a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header> -->
+
+
+
+    <section id="main-slider" class="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="container">
+                    <div class="carousel-content">
+                        <img src="images/CodeNIH_Logo.jpg" alt="CodeNIH Logo" style="width:80%;">
+                        <!-- <h1>Free Onepage Theme</h1> -->
+                        <p class="lead"></p>
+                    </div>
+                </div>
+            </div><!--/.item-->
+            <div class="item">
+                <div class="container">
+                    <div class="carousel-content">
+                        <img src="images/CodeNIH_Logo.jpg" alt="CodeNIH Logo" style="width:80%;">
+                        <!-- <h1>Free Onepage Theme</h1> -->
+                        <p class="lead"></p>
+                    </div>
+                </div>
+            </div><!--/.item-->
+        </div><!--/.carousel-inner-->
+        <a class="prev" href="#main-slider" data-slide="prev"><i class="icon-angle-left"></i></a>
+        <a class="next" href="#main-slider" data-slide="next"><i class="icon-angle-right"></i></a>
+    </section><!--/#main-slider-->
+
+    <section id="services">
+        <div class="container">
+            <div class="box first">
+            <h3 style="text-align:center">An incubator bringing young researchers together to expand</br>programming and engineering applications in health</br></br></br></h3>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="center">
+                            <i class="icon-apple icon-md icon-color1"></i>
+                            <h4>iOS development</h4>
+                            <p>Learning how to code mobile apps for iPhones.</p>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="center">
+                            <i class="icon-android icon-md icon-color2"></i>
+                            <h4>Android development</h4>
+                            <p>Enabling peace of mind for solo joggers by monitoring heart rate in real-time using Fitbit.</p>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="center">
+                            <i class="icon-windows icon-md icon-color3"></i>
+                            <h4>Machine Learning</h4>
+                            <p>Combining the efficacy of web scraping with novel machine learning algorithms to predict the age of patients by bone density on radiographs.</p>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="center">
+                            <!-- <i class="fa fa-eye icon-md icon-color4"></i> -->
+                            <img src="images/ico/python_logo.png" style="width: 70px; height: 70px;">
+                            <h4>Django and Python</h4>
+                            <p>Learning front and back-end web development.</p>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="center">
+                            <i class="icon-css3 icon-md icon-color5"></i>
+                            <h4>Computer Vision</h4>
+                            <p>Tracking the movements of vehicles to make meaning of traffic patterns to create algorithms with potential clinical application.</p>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="center">
+                            <i class="icon-thumbs-up icon-md icon-color6"></i>
+                            <h4>Image Analysis</h4>
+                            <p>Using Matlab and ImageJ library to intelligently isolate brown adipose tissue from PET scan data.</p>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div><!--/.row-->
+            </div><!--/.box-->
+        </div><!--/.container-->
+    </section><!--/#services-->
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="box">
+                <div class="center gap">
+                    <h2>Portfolio</h2>
+                    <p class="lead">See what members have been working on</p>
+                </div><!--/.center-->
+                <ul class="portfolio-filter">
+<!--                     <li><a class="btn btn-primary active" href="#" data-filter="*">All</a></li>
+                    <li><a class="btn btn-primary" href="#" data-filter=".bootstrap">Bootstrap</a></li>
+                    <li><a class="btn btn-primary" href="#" data-filter=".html">HTML</a></li>
+                    <li><a class="btn btn-primary" href="#" data-filter=".wordpress">Wordpress</a></li> -->
+                </ul><!--/#portfolio-filter-->
+                <ul class="portfolio-items col-4">
+                    <li class="portfolio-item apps">
+                        <div class="item-inner">
+                            <div class="portfolio-image">
+                                <img src="images/portfolio/thumb/item1.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-danger" title="Heart Rate Fitbit Tracker" href="images/portfolio/full/item1.jpg"><i class="icon-eye-open"></i></a>             
+                                </div>
+                            </div>
+                            <h5>Heart Rate Fitbit Tracker</h5>
+                        </div>
+                    </li><!--/.portfolio-item-->
+                    <li class="portfolio-item joomla bootstrap">
+                        <div class="item-inner">
+                            <div class="portfolio-image">
+                                <img src="images/portfolio/thumb/item2.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item2.jpg"><i class="icon-eye-open"></i></a>  
+                                </div>
+                            </div> 
+                            <h5>Predicting XRay Bone Age</h5>         
+                        </div>
+                    </li><!--/.portfolio-item-->
+                    <li class="portfolio-item bootstrap wordpress">
+                        <div class="item-inner">
+                            <div class="portfolio-image">
+                                <img src="images/portfolio/thumb/item3.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item3.jpg"><i class="icon-eye-open"></i></a>        
+                                </div> 
+                            </div>
+                            <h5>Material Design</h5>          
+                        </div>           
+                    </li><!--/.portfolio-item-->
+                    <li class="portfolio-item joomla wordpress apps">
+                        <div class="item-inner">
+                            <div class="portfolio-image">
+                                <img src="images/portfolio/thumb/item4.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item4.jpg"><i class="icon-eye-open"></i></a>          
+                                </div>   
+                            </div>
+                            <h5>Machine Learning Practice</h5>        
+                        </div>           
+                    </li><!--/.portfolio-item-->
+                    <li class="portfolio-item joomla html">
+                        <div class="item-inner">
+                            <div class="portfolio-image">
+                                <img src="images/portfolio/thumb/item5.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item5.jpg"><i class="icon-eye-open"></i></a>          
+                                </div>  
+                            </div>
+                            <h5>Traffic Cam</h5>  
+                        </div>       
+                    </li><!--/.portfolio-item-->
+                    <li class="portfolio-item wordpress html">
+                        <div class="item-inner">
+                            <div class="portfolio-image">
+                                <img src="images/portfolio/thumb/item6.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item6.jpg"><i class="icon-eye-open"></i></a>           
+                                </div>  
+                            </div>
+                            <h5>Analyzing Flow Cytometry Data</h5>         
+                        </div>           
+                    </li><!--/.portfolio-item-->
+                    <li class="portfolio-item joomla html">
+                        <div class="item-inner">
+                            <div class="portfolio-image">
+                                <img src="images/portfolio/thumb/item7.JPG" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item5.jpg"><i class="icon-eye-open"></i></a>          
+                                </div>  
+                            </div>
+                           <h5>3D Printing CAD Workshop</h5>  
+                        </div>       
+                    </li>
+                  <li class="portfolio-item wordpress html">
+                        <div class="item-inner">
+                            <div class="portfolio-image">
+                                <img src="images/portfolio/thumb/item8.JPG" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item6.jpg"><i class="icon-eye-open"></i></a>           
+                                </div>   
+                            </div>
+                            <h5>Arduino Workshop</h5>      
+                        </div>         
+                    </li>portfolio-item-->
+                </ul>   
+            </div><!--/.box-->
+        </div><!--/.container-->
+    </section><!--/#portfolio-->
+
+    <section id="about-us">
+        <div class="container">
+            <div class="box">
+                <div class="center">
+                    <h2>Meet the Team</h2>
+                    <p class="lead">Est. Feb 2016 A.D.</p>
+                </div>
+                <div class="gap"></div>
+                <div id="team-scroller" class="carousel scale">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="member">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="member">
+                                    </div>
+                                </div>  
+
+                                <div class="col-sm-4">
+                                    <div class="member">                
+                                    </div>
+                                </div>
+                            
+                                <div class="col-sm-4">
+                                    <div class="member">
+                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/team1.jpg" alt="" ></p>
+                                        <h3>Alex George<small class="designation">Founder</small></h3>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="member">
+                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/team3.jpg" alt="" ></p>
+                                        <h3>Sunmee Huh<small class="designation">Founder</small></h3>
+                                    </div>
+                                </div>  
+
+                                <div class="col-sm-4">
+                                    <div class="member">
+                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/team2.jpg" alt="" ></p>
+                                        <h3>Alejandro Morales Martinez<small class="designation">Founder</small></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="row">                                
+                                <div class="col-sm-4">
+                                    <div class="member">
+                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/team4square.jpg" alt="" ></p>
+                                        <h3>David Rubenstein<small class="designation">Team Leader</small></h3>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="member">
+                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/team5square.jpg" alt="" ></p>
+                                        <h3>Benjamin Cohen<small class="designation">Member</small></h3>
+                                    </div>
+                                </div>  
+
+                                <!-- <div class="col-sm-4">
+                                    <div class="member">
+                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/team5square.jpg" alt="" ></p>
+                                        <h3>Maxim Cohen<small class="designation">Team Leader</small></h3>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                </div><!--/.carousel-->
+            </div><!--/.box-->
+        </div><!--/.container-->
+    </section><!--/#about-us-->
+
+
+    <section id="resources">
+        <div class="container">
+            <div class="box">
+                <div class="center">
+                    <h2>Resources</h2>
+                    <p class="lead"></p>
+                </div>
+                <div class="gap"></div>
+                <div id="team-scroller" class="carousel scale">
+                    <div class="carousel-inner">
+                        <div class="item active">
+
+
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="member">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="member">
+                                    </div>
+                                </div>  
+
+                                <div class="col-sm-4">
+                                    <div class="member">                
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="member">
+                                        <p></p>
+                                        <h3>Github<small class="designation"><a href="https://www.github.com/codenih">CodeNIH GitHub</a></small></h3>
+                                    </div>
+                                </div>  
+
+                                <div class="col-sm-4">
+                                    <div class="member">
+                                        <p></p>
+                                        <h3>Useful Links<small class="designation"><a href="https://www.atlassian.com/git/tutorials/what-is-version-control">Github Introduction</a></small></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                </div><!--/.carousel-->
+            </div><!--/.box-->
+        </div><!--/.container-->
+    </section><!--/#Resources-->
+
+    <section id="about-us">
+        <div class="container">
+            <div class="box">
+                <div class="center">
+                    <h2>Gallery</h2>
+                    <p class="lead">Meetings, Workshops, and Presentations</p>
+                </div>
+                <div class="gap"></div>
+                <div id="team-scroller" class="carousel scale">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row">
+                                    <!-- <div class="member">
+                                        <p><img class="img-responsive" src="images/realPeople/Gallery/IMG_3027.mov" alt="" ></p>
+                                        <h3></h3>
+                                    </div> -->
+
+                                <div class="col-sm-4">
+                                    <div class="member"></div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="member">
+                                    </div>
+                                </div>  
+
+                                <div class="col-sm-4">
+                                    <div class="member">                
+                                    </div>
+                                </div>
+
+                                    <div class="member">
+                                        <p><img class="img-responsive" src="images/realPeople/Gallery/IMG_3135.JPG" alt="" ></p>
+                                        <h3></h3>
+                                    </div>
+                                    <div class="member">
+                                        <p><img class="img-responsive" src="images/realPeople/Gallery/IMG_1444.JPG" alt="" ></p>
+                                        <h3></h3>
+                                    </div>
+                                    <div class="member">
+                                        <p><img class="img-responsive" src="images/realPeople/Gallery/IMG_1445.JPG" alt="" ></p>
+                                        <h3></h3>
+                                    </div> 
+                                    <div class="member">
+                                        <p><img class="img-responsive" src="images/realPeople/Gallery/IMG_1452-rotate.JPG" alt="" ></p>
+                                        <h3></h3>
+                                    </div>
+                                    <div class="member">
+                                        <p><img class="img-responsive" src="images/realPeople/Gallery/IMG_2941.JPG" alt="" ></p>
+                                        <h3></h3>
+                                    </div>
+                                    <div class="member">
+                                        <p><img class="img-responsive" src="images/realPeople/Gallery/IMG_2945.JPG" alt="" ></p>
+                                        <h3></h3>
+                                    </div>
+                                    <div class="member">
+                                        <p><img class="img-responsive" src="images/realPeople/Gallery/IMG_2950.JPG" alt="" ></p>
+                                        <h3></h3>
+                                    </div>
+                                    <div class="member">
+                                        <p><img class="img-responsive" src="images/realPeople/Gallery/IMG_3024.JPG" alt="" ></p>
+                                        <h3></h3>
+                                    </div>
+                                    <div class="member">
+                                        <p><img class="img-responsive" src="images/realPeople/Gallery/IMG_3029.JPG" alt="" ></p>
+                                        <h3></h3>
+                                    </div>   
+                                    <div class="member">
+                                        <p><img class="img-responsive" src="images/realPeople/Gallery/slider_table_1.JPG" alt="" ></p>
+                                        <h3></h3>
+                                    </div>              
+                            </div>
+
+                            
+                        </div>
+                </div><!--/.carousel-->
+            </div><!--/.box-->
+        </div><!--/.container-->
+    </section><!--/#gallery-->
+
+
+    <section id="contact">
+        <div class="container">
+            <div class="box last">
+                <div class="row">
+                    <!-- <div class="col-sm-6">
+                        <h1>Contact Form</h1>
+                        <p>Send questions and comments our way</p>
+                        <div class="status alert alert-success" style="display: none"></div>
+                        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" required="required" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" required="required" placeholder="Email address">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-danger btn-lg">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div><!--/.col-sm-6-->
+                    <div class="col-sm-6">
+<!--                         <h1>Our Address</h1>
+ -->                        <div class="row">
+                            <div class="col-md-6">
+                                <address>
+                                    <strong>CodeNIH</strong><br>
+                                    37 Convent Dr. Bldg. 37, Room 2041<br>
+                                    Bethesda, MD 20892<br>
+                                    Weekly Meetings Wednesdays<br>
+                                    5 - 7 PM
+                                    <!-- <abbr title="Phone">P:</abbr> (301) 456-7890 -->
+                                </address>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- <address>
+                                    <strong>Twitter, Inc.</strong><br>
+                                    795 Folsom Ave, Suite 600<br>
+                                    San Francisco, CA 94107<br>
+                                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                                </address> -->
+                            </div>
+                        </div>
+                        <!-- <h1>Connect with us</h1>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="social">
+                                    <li><a href="#"><i class="icon-facebook icon-social"></i> Facebook</a></li>
+                                    <li><a href="#"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>
+                                    <li><a href="#"><i class="icon-pinterest icon-social"></i> Pinterest</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="social">
+                                    <li><a href="#"><i class="icon-linkedin icon-social"></i> Linkedin</a></li>
+                                    <li><a href="#"><i class="icon-twitter icon-social"></i> Twitter</a></li>
+                                    <li><a href="#"><i class="icon-youtube icon-social"></i> Youtube</a></li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div><!--/.col-sm-6-->
+                </div><!--/.row-->
+            </div><!--/.box-->
+        </div><!--/.container-->
+    </section><!--/#contact-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    
+                </div>
+                <div class="col-sm-6">
+       
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
